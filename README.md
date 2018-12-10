@@ -1,5 +1,5 @@
 # postgresql_multidb_docker
-Create multiple databases at glance in a single postgresql docker container using just environment variables. Just need to respect semantics:
+Create multiple databases in a single postgresql docker container using just environment variables. No need to build custom images, just respect semantics:
 
 POSTGRES_MULTIDB_<db_name>_DB
 
