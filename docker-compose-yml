@@ -1,0 +1,14 @@
+version: '3'
+services:
+  postgresql:
+    image: postgres:9.6
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=xi0iem0Ahch0joox
+      - POSTGRES_MULTIDB_MYDB1_DB=mydb1
+      - POSTGRES_MULTIDB_MYDB1_USERNAME=mydb1user
+      - POSTGRES_MULTIDB_MYDB1_PASSWORD=mydb1pass
+      - POSTGRES_MULTIDB_MYDB2_DB=mydb2
+      - POSTGRES_MULTIDB_MYDB2_USERNAME=mydb2user
+      - POSTGRES_MULTIDB_MYDB2_PASSWORD=mydb2pass
+    restart: always
