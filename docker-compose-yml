@@ -1,5 +1,6 @@
 version: '3'
 services:
+
   postgresql:
     image: postgres:9.6
     environment:
@@ -11,4 +12,14 @@ services:
       - POSTGRES_MULTIDB_MYDB2_DB=mydb2
       - POSTGRES_MULTIDB_MYDB2_USERNAME=mydb2user
       - POSTGRES_MULTIDB_MYDB2_PASSWORD=mydb2pass
+    volumes:
+      - postgresql-init:/docker-entrypoint-initdb.d
     restart: always
+
+volumes:
+
+  postgresql-init:
+    driver_opts:
+      type: none
+      device: ${PWD}/postgresql-multidb-entrypoint
+      o: bind
